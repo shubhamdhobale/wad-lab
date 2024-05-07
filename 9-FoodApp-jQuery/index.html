@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Food App</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <style>
+        /* Custom CSS styles for the food app */
+        
+        body {
+            background-color: #f8f8f8;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+        }
+        
+        .header {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        
+        .content {
+            margin-top: 70px;
+            position: absolute;
+            left: 33%;
+        }
+        
+        .food-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            width: 30vw;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s;
+        }
+        
+        .food-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .food-item .info {
+            padding: 20px;
+        }
+        
+        .food-item h2 {
+            margin-top: 0;
+            font-size: 20px;
+            color: #333;
+        }
+        
+        .food-item p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .food-item a {
+            display: block;
+            text-align: center;
+            color: #fff;
+            background-color: #ffcc00;
+            padding: 10px 0;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .food-item a:hover {
+            background-color: #ffdb4d;
+        }
+        
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animated {
+            animation: fadeInUp 0.5s ease-out;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div data-role="page">
+
+        <div class="header">
+            <h1>Food App</h1>
+        </div>
+
+        <div class="content">
+            <div class="food-item animated">
+                <img src="https://img.freepik.com/free-photo/exploding-burger-with-vegetables-melted-cheese-black-background-generative-ai_157027-1734.jpg" alt="Pizza">
+                <div class="info">
+                    <h2>Pizza</h2>
+                    <p>Delicious pizza with various toppings.</p>
+                    <a href="#">Order Now</a>
+                </div>
+            </div>
+            <div class="food-item animated">
+                <img src="https://w0.peakpx.com/wallpaper/214/646/HD-wallpaper-delicious-food-iteam-spicey-food-tasty-food-yummy-food-food-delicious-food.jpg" alt="Burger">
+                <div class="info">
+                    <h2>Burger</h2>
+                    <p>Juicy burger with cheese and veggies.</p>
+                    <a href="#">Order Now</a>
+                </div>
+            </div>
+            <div class="food-item animated">
+                <img src="https://wallpapers.com/images/hd/4k-food-chicken-fajita-7iy05irgfujy2zvd.jpg" alt="Sushi">
+                <div class="info">
+                    <h2>Sushi</h2>
+                    <p>Authentic Japanese sushi rolls.</p>
+                    <a href="#">Order Now</a>
+                </div>
+            </div>
+            <div class="food-item animated">
+                <img src="https://wallpapers.com/images/hd/4k-food-chicken-fajita-7iy05irgfujy2zvd.jpg" alt="Sushi">
+                <div class="info">
+                    <h2>Sushi</h2>
+                    <p>Authentic Japanese sushi rolls.</p>
+                    <a href="#">Order Now</a>
+                </div>
+            </div>
+            <div class="food-item animated">
+                <img src="https://wallpapers.com/images/hd/4k-food-chicken-fajita-7iy05irgfujy2zvd.jpg" alt="Sushi">
+                <div class="info">
+                    <h2>Sushi</h2>
+                    <p>Authentic Japanese sushi rolls.</p>
+                    <a href="#">Order Now</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
