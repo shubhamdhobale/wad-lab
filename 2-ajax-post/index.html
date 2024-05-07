@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+</head>
+
+<body>
+    <h1>User Registration</h1>
+    <form id="registrationForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <button type="button" onclick="registerUser()">Register</button>
+    </form>
+
+    <script>
+        function registerUser() {
+            // Get user input
+            var username = document.getElementById("username").value;
+            var email = document.getElementById("email").value;
+
+            // Create an object with the user data
+            var userData = {
+                username: username,
+                email: email
+            };
+
+            // Store the user data locally
+            var registeredUsers = localStorage.getItem("registeredUsers");
+            if (registeredUsers) {
+                // If there are already registered users, parse and append the new user
+                registeredUsers = JSON.parse(registeredUsers);
+                registeredUsers.push(userData);
+                localStorage.setItem("registeredUsers", JSON.stringify(registeredUsers));
+            } else {
+                // If no registered users yet, create a new array with the user
+                localStorage.setItem("registeredUsers", JSON.stringify([userData]));
+            }
+
+            // Redirect to the data list page
+            window.location.href = "data_list.html";
+        }
+    </script>
+</body>
+
+</html>

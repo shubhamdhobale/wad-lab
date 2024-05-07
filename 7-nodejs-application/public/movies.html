@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies - Movie Ticket Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional CSS styles for the movies page */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* Global Styles */
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+        
+        header h1 {
+            font-size: 24px;
+        }
+        
+        nav {
+            display: flex;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+        
+        nav ul li {
+            /* display: inline; */
+            margin-right: 20px;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .movies {
+            padding: 50px 0;
+            background-color: #f5f5f5;
+        }
+        
+        .movie-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .movie-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            width: 300px;
+        }
+        
+        .movie-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .movie-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+        
+        .movie-info {
+            padding: 20px;
+        }
+        
+        .movie-info h3 {
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #333;
+        }
+        
+        .movie-info p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        
+        .movie-info a {
+            display: inline-block;
+            background-color: #ffcc00;
+            color: #333;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+        
+        .movie-info a:hover {
+            background-color: #ffdb4d;
+        }
+        /* Footer styling */
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Movie Ticket Booking</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="./movies.html">Movies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="movies">
+        <div class="container">
+            <h2 class="section-title">All Movies</h2>
+            <div class="movie-container">
+                <div class="movie-card">
+                    <img src="https://preview.redd.it/new-fighter-poster-the-film-releases-in-one-month-set-to-be-v0-1694oij8hd8c1.jpeg?auto=webp&s=475385f31cefefe1905bb0cf25197f028b7ea899" alt="Movie 1">
+                    <div class="movie-info">
+                        <h3>Movie 1</h3>
+                        <p>Description of Movie 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non porttitor ligula.</p>
+                        <a href="#">Book Now</a>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="https://images.deccanherald.com/deccanherald%2F2024-01%2Fa91ad7c6-feb3-4ee9-b76f-2d6e32d603a9%2FThangalaan.jpeg?rect=0%2C0%2C2520%2C3360" alt="Movie 2">
+                    <div class="movie-info">
+                        <h3>Movie 2</h3>
+                        <p>Description of Movie 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non porttitor ligula.</p>
+                        <a href="#">Book Now</a>
+                    </div>
+                </div>
+                <!-- Add more movie cards as needed -->
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Movie Ticket Booking. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
