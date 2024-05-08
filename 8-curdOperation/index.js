@@ -2,6 +2,8 @@ require('dotenv').config();
 const cors = require('cors');
 const express = require('express');
 const mongoose = require('mongoose');
+
+//replace connection string
 const mongoString = 'mongodb://127.0.0.1:27017/example1';
 
 mongoose.connect(mongoString);
