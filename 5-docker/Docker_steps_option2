@@ -11,3 +11,9 @@ sudo docker ps -a
 sudo docker ps 
 
 
+
+dockerfile:-
+
+FROM node:alphane
+COPY . /docker
+CMD node /docker/practice.js
