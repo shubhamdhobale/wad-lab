@@ -1,0 +1,13 @@
+sudo apt-get update
+sudo apt-get install docker-ce
+//If command 2 causes any error enter the third commad
+docker install
+sudo apt install docker.io
+sudo snap install docker
+docker --version
+sudo docker run hello-world
+ sudo docker images
+sudo docker ps -a
+sudo docker ps 
+
+

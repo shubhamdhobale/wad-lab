@@ -1,0 +1,36 @@
+Docker Assignment
+First in visual studio code create one folder in that save files app.js and Dockerfile
+also before creating that files open terminal
+
+write “npm init” and create package.json file
+
+app.js code:-
+console.log("Hello world this is docker")
+
+Dockerfile:-
+FROM node:14
+# Set working directory
+WORKDIR /app
+# Copy application files
+COPY . .
+# Command to run the application
+CMD ["node", "app.js"] 
+
+cg87@cg87:~$ sudo apt update
+cg87@cg87:~$ sudo apt install apt-transport-https ca-certificates curl software-properties-common
+cg87@cg87:~$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add –
+cg87@cg87:~$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+cg87@cg87:~$ apt-cache policy docker-ce
+cg87@cg87:~$ sudo apt install docker-ce
+cg87@cg87:~$ sudo systemctl status docker
+cg87@cg87:~$ sudo systemctl start docker
+cg87@cg87:~$ sudo systemctl enable docker
+
+cg87@cg87:~$ sudo docker info
+cg87@cg87:~$ sudo docker run hello-world
+cg87@cg87:~$ sudo docker build -t node-docker-app .
+cg87@cg87:~/Desktop/dockerAssignment$ sudo docker run -p 3000:3000 node-docker-app
+cg87@cg87:~/Desktop/dockerAssignment$ sudo docker images
+
+sudo docker build -t your-image-name .
+sudo docker run your-image-name
