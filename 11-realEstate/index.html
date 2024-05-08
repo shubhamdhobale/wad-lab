@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Portal</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        .wrapper {
+            width: 100vw;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        
+        .navbar {
+            background-color: #6c757d;
+            /* Unique color for navbar */
+            transition: background-color 0.3s ease-in-out;
+        }
+        
+        .navbar-brand {
+            color: #fff;
+            /* Logo color */
+            font-weight: bold;
+        }
+        
+        .navbar-nav {
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+        }
+        
+        .navbar-nav .nav-item .nav-link {
+            color: #fff;
+            transition: color 0.3s ease-in-out;
+        }
+        
+        .navbar-nav .nav-item .nav-link:hover {
+            color: #17a2b8;
+            /* Hover color */
+        }
+        
+        .navbar-nav .login-nav {
+            margin-left: auto;
+        }
+        
+        .navbar-nav .login-nav .nav-item .nav-link {
+            color: #fff;
+            transition: color 0.3s ease-in-out;
+        }
+        
+        .navbar-nav .login-nav .nav-item .nav-link:hover {
+            color: #17a2b8;
+            /* Hover color */
+        }
+        
+        .card {
+            margin-bottom: 20px;
+        }
+        
+        .footer {
+            background-color: #343a40;
+            /* Footer background color */
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">Real Estate Portal</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="properties.html">Properties</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class=" nav-item ">
+                            <a class="nav-link " href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav login-nav ">
+                        <li class="nav-item ">
+                            <a class="nav-link " href="# ">Login</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link " href="# ">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="main ">
+            <div class="container mt-4 ">
+                <div class="row ">
+                    <div class="col-md-4 ">
+                        <div class="card ">
+                            <img src="https://www.investopedia.com/thmb/bfHtdFUQrl7jJ_z-utfh8w1TMNA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/houses_and_land-5bfc3326c9e77c0051812eb3.jpg " class="card-img-top " alt="Property 1 ">
+                            <div class="card-body ">
+                                <h5 class="card-title ">123 Main St, City</h5>
+                                <p class="card-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet est justo.</p>
+                                <p class="card-text "><strong>$250,000</strong></p>
+                                <a href="# " class="btn btn-primary ">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 ">
+                        <div class="card ">
+                            <img src="https://www.mashvisor.com/blog/wp-content/uploads/2018/04/bigstock-Row-Of-New-Suburban-Homes-55511546.jpg " class="card-img-top " alt="Property 2 ">
+                            <div class="card-body ">
+                                <h5 class="card-title ">456 Elm St, Town</h5>
+                                <p class="card-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet est justo.</p>
+                                <p class="card-text "><strong>$300,000</strong></p>
+                                <a href="# " class="btn btn-primary ">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 ">
+                        <div class="card ">
+                            <img src="https://assets.entrepreneur.com/content/3x2/2000/20150622231001-for-sale-real-estate-home-house.jpeg " class="card-img-top " alt="Property 3 ">
+                            <div class="card-body ">
+                                <h5 class="card-title ">789 Oak St, Village</h5>
+                                <p class="card-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet est justo.</p>
+                                <p class="card-text "><strong>$200,000</strong></p>
+                                <a href="# " class="btn btn-primary ">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer ">
+            <div class="container ">
+                <span>&copy; 2024 Real Estate Portal. All rights reserved.</span>
+            </div>
+        </footer>
+    </div>
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js "></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+    <!-- Your custom JavaScript -->
+    <script>
+        // Add your JavaScript code here
+    </script>
+
+</body>
+
+</html>
