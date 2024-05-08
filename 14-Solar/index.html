@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renewable Energy (Solar) Uses and Services in India</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        /* Customize your styles here */
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            /* Light gray background */
+            color: #343a40;
+            /* Dark gray text color */
+        }
+        
+        .header {
+            background-color: #343a40;
+            /* Dark gray header background */
+            color: #ffffff;
+            /* White text color */
+            padding: 10px 0;
+            text-align: center;
+        }
+        
+        .footer {
+            background-color: #343a40;
+            /* Dark gray footer background */
+            color: #ffffff;
+            /* White text color */
+            padding: 10px 0;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            /* White container background */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1,
+        h2,
+        h3 {
+            text-align: center;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .btn-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .btn-container button {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Renewable Energy (Solar) Uses and Services in India</h1>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Solar Energy India</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#offers">Offers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" id="about">
+        <h2>About Renewable Energy (Solar)</h2>
+        <p>Solar energy is a renewable energy source that is derived from the sun's rays. In India, solar energy has gained significant momentum in recent years due to its environmental benefits and cost-effectiveness.</p>
+        <img src="https://static.vecteezy.com/system/resources/previews/005/389/923/non_2x/renewable-energy-sources-with-solar-panels-installed-in-the-field-the-concept-of-alternative-clean-energy-flat-illustration-vector.jpg" alt="Solar Panels" class="img-fluid">
+    </div>
+
+    <div class="container" id="services">
+        <h2>Our Services</h2>
+        <p>We offer a range of solar energy services, including:</p>
+        <ul>
+            <li>Residential Solar Panel Installation</li>
+            <li>Commercial Solar Panel Installation</li>
+            <li>Solar Water Heating Systems</li>
+            <li>Solar Power Plants</li>
+            <li>Maintenance and Repair Services</li>
+        </ul>
+        <img src="https://www.prysmian.com/sites/www.prysmian.com/files/2024-01/photovoltaics-1200x500.png" alt="Solar Panels" class="img-fluid">
+    </div>
+
+    <div class="container" id="offers">
+        <h2>Offers and Charges</h2>
+        <div class="btn-container">
+            <button type="button" class="btn btn-primary" onclick="displayResidentialOffers()">Residential Offers</button>
+            <button type="button" class="btn btn-primary" onclick="displayCommercialOffers()">Commercial Offers</button>
+            <button type="button" class="btn btn-primary" onclick="displayMaintenanceCharges()">Maintenance Charges</button>
+        </div>
+        <div id="offerDetails"></div>
+        <img src="https://www.kondaas.com/wp-content/uploads/2023/10/Solar-Power-Solutions-Meeting-the-Energy-Needs-of-Tomorrow-1.png" alt="Solar Panels" class="img-fluid">
+    </div>
+
+    <div class="container" id="contact">
+        <h2>Contact Us</h2>
+        <p>For inquiries and appointments, please contact us at:</p>
+        <p>Email: info@solarindia.com</p>
+        <p>Phone: +91 1234567890</p>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Solar Energy India</p>
+    </div>
+
+    <!-- Bootstrap JS (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function displayResidentialOffers() {
+            // Display residential offers
+            var offerDetails = document.getElementById("offerDetails");
+            offerDetails.innerHTML = "<h3>Residential Offers</h3><p>Special discounts on residential solar panel installations.</p>";
+        }
+
+        function displayCommercialOffers() {
+            // Display commercial offers
+            var offerDetails = document.getElementById("offerDetails");
+            offerDetails.innerHTML = "<h3>Commercial Offers</h3><p>Tailored solutions for commercial solar energy projects.</p>";
+        }
+
+        function displayMaintenanceCharges() {
+            // Display maintenance charges
+            var offerDetails = document.getElementById("offerDetails");
+            offerDetails.innerHTML = "<h3>Maintenance Charges</h3><p>Standard charges for maintenance and repair services.</p>";
+        }
+    </script>
+
+</body>
+
+</html>
