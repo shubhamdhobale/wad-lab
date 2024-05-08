@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System - Patient Information</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Patient Information</h1>
+        <h3>Total Number of Patients: <span id="totalPatients"></span></h3>
+        <div id="patientInfo"></div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Your custom JavaScript -->
+    <script>
+        $(document).ready(function() {
+            // Retrieve patient data from localStorage
+            var patients = JSON.parse(localStorage.getItem('patients') || '[]');
+
+            // Display patient count
+            $('#totalPatients').text(patients.length);
+
+            // Display patient information
+            var patientInfo = $('#patientInfo');
+            if (patients.length === 0) {
+                patientInfo.append('<p>No patients registered yet.</p>');
+            } else {
+                var patientList = '<ul>';
+                patients.forEach(function(patient) {
+                    patientList += '<li>Name: ' + patient.name + ', Age: ' + patient.age + ', Gender: ' + patient.gender + ', Contact: ' + patient.contact + '</li>';
+                });
+                patientList += '</ul>';
+                patientInfo.append(patientList);
+            }
+        });
+    </script>
+
+</body>
+
+</html>

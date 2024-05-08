@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System - Patient Registration</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Patient Registration</h1>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" class="form-control" id="age" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select class="form-control" id="gender" required>
+        <option value="">Select Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact Number</label>
+                <input type="tel" class="form-control" id="contact" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Your custom JavaScript -->
+    <script>
+        $(document).ready(function() {
+            // Submit form
+            $('#registrationForm').submit(function(event) {
+                event.preventDefault(); // Prevent default form submission
+
+                // Get form data
+                var formData = {
+                    name: $('#name').val(),
+                    age: $('#age').val(),
+                    gender: $('#gender').val(),
+                    contact: $('#contact').val()
+                };
+
+                // Clear form fields
+                $('#name').val('');
+                $('#age').val('');
+                $('#gender').val('');
+                $('#contact').val('');
+
+                // Store patient data in localStorage
+                var patients = JSON.parse(localStorage.getItem('patients') || '[]');
+                patients.push(formData);
+                localStorage.setItem('patients', JSON.stringify(patients));
+
+                // Redirect to patient information page
+                window.location.href = 'patient_information.html';
+            });
+        });
+    </script>
+
+</body>
+
+</html>
