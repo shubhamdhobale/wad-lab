@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Car Rental and Booking Services</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Add a fade-in effect to the navbar */
+        
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        /* Add a keyframes animation for the slide-up effect */
+        
+        @keyframes slide-up {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+        
+        .card {
+            margin: 20px 0;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+        
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            bottom: 0%;
+        }
+        
+        .container-fluid {
+            color: white;
+        }
+        
+        .navbar-brand,
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            background-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar bg-body-tertiary bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand">Navbar</a>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">Contact</a>
+                </li>
+            </ul>
+
+            <form class=" d-flex " role="search ">
+                <input class="form-control me-2 " type="search " placeholder="Search " aria-label="Search ">
+                <button class="btn btn-outline-success " type="submit ">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="parallax" style="background-image: url('background.jpg');">
+        <h1 id="typewriter"></h1>
+    </div>
+    <div class="container ">
+        <div class="row ">
+            <div class="col-md-4 ">
+                <div class="card ">
+                    <img src="https://lh3.googleusercontent.com/proxy/7XakZMC-2weOiLyym-R5cc_Z2Qzry3MKBohpoxG6YzDhg3NSBnMSfJA8o2iyyaEVoIO1tqynUIfuMf_PYBpQU8Hu1w " alt="Car 1 ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Car 1</h5>
+                        <p class="card-text ">Description of Car 1.</p>
+                        <a href="# " class="btn btn-primary ">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 ">
+                <div class="card ">
+                    <img src="https://images.inc.com/uploaded_files/image/1920x1080/getty_649362670_395940.jpg " alt="Car 2 ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Car 2</h5>
+                        <p class="card-text ">Description of Car 2.</p>
+                        <a href="# " class="btn btn-primary ">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 ">
+                <div class="card ">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMIGl0vgaKhXLH4AB21v7B3ilFr1C4k_VOOAMZNWkgfQ&s " alt="Car 3 ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Car 3</h5>
+                        <p class="card-text ">Description of Car 3.</p>
+                        <a href="# " class="btn btn-primary ">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </nav>
+    <div class="footer ">
+        <p>Copyright © 2024 Car Rental and Booking Services</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js "></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        // Add a smooth scrolling effect to the navbar links
+        $('a[href*="#"]')
+            .not('[href="#"]')
+            .not('[href="#0"]')
+            .click(function(event) {
+                if (
+                    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+                    location.hostname == this.hostname
+                ) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        event.preventDefault();
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000, function() {
+                            var $target = $(target);
+                            $target.focus();
+                            if ($target.is(":focus")) {
+                                return false;
+                            } else {
+                                $target.attr('tabindex', '-1');
+                                $target.focus();
+                            };
+                        });
+                    }
+                }
+            });
+
+        // Add a parallax effect to the background image
+        $(window).on('scroll', function() {
+            var st = $(this).scrollTop();
+            $('.parallax').css({
+                'background-position': '0px ' + (st * 0.5) + 'px'
+            });
+        });
+
+        // Add a typewriter effect to the heading
+        $(document).ready(function() {
+            var text = "Welcome to Car Rental and Booking Services!";
+            var delay = 50;
+            var current = 0;
+            var destination = $("#typewriter");
+
+            function type() {
+                if (current < text.length) {
+                    destination.html(destination.html() + text[current]);
+                    current++;
+                    setTimeout(type, delay);
+                }
+            }
+
+            type();
+        });
+    </script>
+</body>
+
+</html>
