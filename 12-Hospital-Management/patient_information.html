@@ -7,14 +7,129 @@
     <title>Hospital Management System - Patient Information</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        /* Customize your styles here */
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            /* Light gray background */
+        }
+        
+        .header {
+            background-color: #343a40;
+            /* Dark gray header background */
+            color: #ffffff;
+            /* White text color */
+            padding: 10px 0;
+            text-align: center;
+            animation: fadeInDown 1s ease;
+        }
+        
+        .footer {
+            background-color: #343a40;
+            /* Dark gray footer background */
+            color: #ffffff;
+            /* White text color */
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            /* White container background */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        h3 {
+            text-align: center;
+        }
+        
+        .patient-info {
+            margin-top: 20px;
+        }
+        
+        .patient-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .patient-item {
+            background-color: #ffffff;
+            /* White background for each patient item */
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        /* Animations */
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 
 <body>
 
+    <div class="header">
+        <h2>Patient Information</h2>
+    </div>
+
     <div class="container">
-        <h1>Patient Information</h1>
+        <!-- <h1>Patient Information</h1> -->
         <h3>Total Number of Patients: <span id="totalPatients"></span></h3>
-        <div id="patientInfo"></div>
+        <div class="patient-info">
+            <h3>Registered Patients</h3>
+            <ul class="patient-list" id="patientList"></ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Hospital Management System</p>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -29,16 +144,14 @@
             $('#totalPatients').text(patients.length);
 
             // Display patient information
-            var patientInfo = $('#patientInfo');
+            var patientInfo = $('#patientList');
             if (patients.length === 0) {
-                patientInfo.append('<p>No patients registered yet.</p>');
+                patientInfo.append('<li>No patients registered yet.</li>');
             } else {
-                var patientList = '<ul>';
                 patients.forEach(function(patient) {
-                    patientList += '<li>Name: ' + patient.name + ', Age: ' + patient.age + ', Gender: ' + patient.gender + ', Contact: ' + patient.contact + '</li>';
+                    var li = $('<li class="patient-item">').text('Name: ' + patient.name + ', Age: ' + patient.age + ', Gender: ' + patient.gender + ', Contact: ' + patient.contact);
+                    patientInfo.append(li);
                 });
-                patientList += '</ul>';
-                patientInfo.append(patientList);
             }
         });
     </script>

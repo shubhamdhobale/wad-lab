@@ -7,9 +7,110 @@
     <title>Hospital Management System - Patient Registration</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        /* Customize your styles here */
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            /* Light gray background */
+        }
+        
+        .header {
+            background-color: #343a40;
+            /* Dark gray header background */
+            color: #ffffff;
+            /* White text color */
+            padding: 10px 0;
+            text-align: center;
+            animation: fadeInDown 1s ease;
+        }
+        
+        .footer {
+            background-color: #343a40;
+            /* Dark gray footer background */
+            color: #ffffff;
+            /* White text color */
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            animation: fadeIn 1s ease;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        form {
+            margin-top: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .btn-primary {
+            width: 100%;
+        }
+        
+        @media (max-width: 576px) {
+            .container {
+                padding: 10px;
+            }
+        }
+        /* Animations */
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 
 <body>
+
+    <div class="header">
+        <h2>Hospital Management</h2>
+    </div>
 
     <div class="container">
         <h1>Patient Registration</h1>
@@ -37,6 +138,10 @@
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Hospital Management System</p>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
