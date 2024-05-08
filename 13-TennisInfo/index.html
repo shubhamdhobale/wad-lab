@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All about Tennis</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        /* Customize your styles here */
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            /* Light gray background */
+        }
+        
+        .header {
+            background-color: #343a40;
+            /* Dark gray header background */
+            color: #ffffff;
+            /* White text color */
+            padding: 10px 0;
+            text-align: center;
+        }
+        
+        .footer {
+            background-color: #343a40;
+            /* Dark gray footer background */
+            color: #ffffff;
+            /* White text color */
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            /* White container background */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1,
+        h2,
+        h3 {
+            text-align: center;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .player-btns {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .player-btns button {
+            margin: 10px;
+        }
+        
+        .rules {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>All about Tennis</h1>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Tennis Info</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#players">Players</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#rules">Rules</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#grand-slam">Grand Slam</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" id="players">
+        <h2>Well-Known Players</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="https://cdn.i-scmp.com/sites/default/files/styles/768x768/public/d8/images/methode/2019/09/13/0964517c-cb04-11e9-b4e3-f796e392de6b_image_hires_101013.jpg?itok=gir4lQGa&v=1568340620" alt="Roger Federer" class="img-fluid">
+                <button type="button" class="btn btn-primary btn-block" onclick="showPlayerAchievements('Roger Federer')">Roger Federer</button>
+            </div>
+            <div class="col-md-4">
+                <img src="https://img.olympics.com/images/image/private/t_1-1_300/f_auto/primary/fhcp8cbxi2atqv7cw8it" alt="Rafael Nadal" class="img-fluid">
+                <button type="button" class="btn btn-primary btn-block" onclick="showPlayerAchievements('Rafael Nadal')">Rafael Nadal</button>
+            </div>
+            <div class="col-md-4">
+                <img src="https://hips.hearstapps.com/hmg-prod/images/novak-djokovic-of-serbia-poses-for-the-media-with-his-news-photo-1694446958.jpg?crop=0.616xw:0.923xh;0.168xw,0.0765xh&resize=640:*" alt="Novak Djokovic" class="img-fluid">
+                <button type="button" class="btn btn-primary btn-block" onclick="showPlayerAchievements('Novak Djokovic')">Novak Djokovic</button>
+            </div>
+        </div>
+        <div id="playerAchievements"></div>
+    </div>
+
+    <div class="container rules" id="rules">
+        <h2>Tennis Rules</h2>
+        <p>Tennis is a sport that is played on a rectangular court by either two players (singles) or four players (doubles). The objective of the game is to hit the ball over the net and into the opponent's court in a way that it cannot be returned. Points
+            are scored when the opponent fails to return the ball within the prescribed dimensions of the court.</p>
+        <p>There are various rules governing aspects such as serving, scoring, and player conduct, which are enforced by trained officials such as umpires and line judges.</p>
+    </div>
+
+    <div class="container" id="grand-slam">
+        <h2>Grand Slam Schedule</h2>
+        <p>The Grand Slam tournaments are the most prestigious events in tennis, consisting of four major championships held annually:</p>
+        <ul>
+            <li>Australian Open - usually held in January in Melbourne, Australia</li>
+            <li>French Open (Roland Garros) - usually held in May and June in Paris, France</li>
+            <li>Wimbledon - usually held in June and July in London, England</li>
+            <li>US Open - usually held in August and September in New York City, USA</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 All about Tennis</p>
+    </div>
+
+    <!-- Bootstrap JS (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function showPlayerAchievements(playerName) {
+            // Simulate fetching player achievements from a database
+            var playerAchievements = {
+                "Roger Federer": "20 Grand Slam titles",
+                "Rafael Nadal": "20 Grand Slam titles",
+                "Novak Djokovic": "20 Grand Slam titles"
+            };
+
+            var achievements = playerAchievements[playerName];
+
+            // Display achievements
+            var playerAchievementsDiv = document.getElementById("playerAchievements");
+            playerAchievementsDiv.innerHTML = "<h3>" + playerName + " Achievements</h3><p>" + achievements + "</p>";
+        }
+    </script>
+
+</body>
+
+</html>
